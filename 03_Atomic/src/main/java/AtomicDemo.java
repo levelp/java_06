@@ -4,8 +4,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicIntegerArray;
 import java.util.concurrent.atomic.AtomicLong;
 
-// atomic
-// ------
+// atomic (пакет java.util.concurrent.atomic)
+// ------------------------------------------
 // Классы из пакета java.util.concurrent.atomic обеспечивают
 // выполнение атомарных операций
 

@@ -1,6 +1,6 @@
 <!-- doc.py -->
-atomic
-------
+atomic (пакет java.util.concurrent.atomic)
+------------------------------------------
 Классы из пакета java.util.concurrent.atomic обеспечивают
 выполнение атомарных операций
 ``` java
@@ -41,13 +41,13 @@ public class AtomicDemo {
         System.out.println("ATOMIC_SUM = " + ATOMIC_SUM.get());
     }
 
-    static void inc() {
+    private static void inc() {
         synchronized (LOCK) {
             sum++;
         }
     }
 
-    static class MyThread extends Thread {
+    private static class MyThread extends Thread {
         @Override
         public void run() {
             threadCount++;
@@ -101,8 +101,8 @@ public class AtomicDemo {
 
 Страртуем 10000 потоков на increment
 Поток пусть поспит случайное время
-Подождём теперь 10 секунд
+Подождём теперь завершения всех потоков
 Страртуем 10000 потоков на increment
-Подождём теперь 10 секунд
+Снова подождём теперь завершения всех потоков
 [src/test/java/SyncronizedTest.java](src/test/java/SyncronizedTest.java)
 
